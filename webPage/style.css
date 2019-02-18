@@ -1,0 +1,61 @@
+html {
+    background: url(magma.jpg) no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+
+.enunciado {
+    color: rgb(209, 63, 63);
+}
+
+.descrip {
+    text-align: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top : 80px;
+    color: white;
+}
+
+ul {
+    padding-top: 50px;
+}
+
+li {
+    display: inline;
+    padding-right: 50px;
+}
+
+
+/* estilos navbar */
+
+.nav-ul {
+    float: right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+.nav-li {
+    float: left;
+  }
+  
+.nav-li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+.logo-magma {
+    width: 30px;
+    height: 30px;
+    padding: 10px 0 0 40px;
+    /* padding-left: 40px;
+    padding-top: 20px; */
+}
