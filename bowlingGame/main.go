@@ -6,34 +6,62 @@ import (
 	"time"
 )
 
-// func main() {
-//
-//
-//
-// 	for ronda := 0; ronda < 9; ronda++  {
-// 		for turno := 0; turno < 2; turno++  {
-// 			rand.Seed(time.Now().UnixNano())
-// 			fmt.Println(randomInt(1, 11)) //get an int in the 1...10 range
-// 		}
-// 		fmt.Println("holi")
-// 	}
-// }
-//
-// func randomInt(min, max int) int {
-// 	num := min + rand.Intn(max-min)
-// 	return num
-// }
+func main() {
 
+	// insertando la semilla para mis números aleatorios
+	rand.Seed(time.Now().UnixNano())
+	scoreTotal := 0
 
-func randomArray(len int) []int {
-	a := make([]int, len)
-	for i := 0; i <= len-1; i++ {
-		a[i] = rand.Intn(len)
+	for ronda := 0; ronda < 9; ronda++ {
+
+		tiro, scoreRound, pinosTotal := 0, 0, 10
+		//strike, spare := false, false
+		strike := false
+
+		for turno := 0; turno < 2; turno++ {
+
+			tiro = rand.Intn(pinosTotal + 1)
+
+			if tiro == 10 {
+				//strike = true
+				//scoreTotal += 10
+				strikeNo()
+				break
+			}
+
+			pinosTotal -= tiro
+			scoreRound += tiro
+
+			//if scoreRound == 10 {
+			//
+			//	break
+			//}
+
+			fmt.Println(tiro)
+
+		}
+
+		scoreTotal += scoreRound
+		if strike == false {
+			fmt.Println("Score: ", scoreTotal)
+		} else {
+			fmt.Println("Hiciste un STRIKE", scoreTotal)
+		}
 	}
-	return a
 }
 
-func main() {
-	rand.Seed(time.Now().UnixNano())
-	fmt.Println(randomArray(10))
+
+func spare() {
+
+}
+
+
+func strikeNo() {
+	fmt.Println("hola")
+}
+
+
+func generadorNumeros(rango int) {
+
+
 }
